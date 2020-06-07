@@ -6,7 +6,6 @@ import authConfig from '../../config/auth';
 
 class SessionController {
   async store(req, res) {
-
     const { email, password } = req.body;
 
     const user = await User.findOne({ where: { email } });
@@ -16,7 +15,9 @@ class SessionController {
     }
 
     if (!(await user.checkPassword(password))) {
-      return res.status(UNAUTHORIZED).json({ error: 'Password does not match' });
+      return res
+        .status(UNAUTHORIZED)
+        .json({ error: 'Password does not match' });
     }
 
     const { id, name } = user;

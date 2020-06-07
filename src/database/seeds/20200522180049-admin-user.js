@@ -1,21 +1,21 @@
-const bcrypt = require("bcryptjs");
+const bcrypt = require('bcryptjs');
 
 module.exports = {
-  up: QueryInterface => {
+  up: (QueryInterface) => {
     return QueryInterface.bulkInsert(
-      "users",
+      'users',
       [
         {
-          name: "Empresa SoftMoney",
-          email: "admin@softmoney.com",
-          password_hash: bcrypt.hashSync("qwerty", 8),
+          name: 'Empresa SoftMoney',
+          email: 'admin@softmoney.com',
+          password_hash: bcrypt.hashSync('qwerty', 8),
           created_at: new Date(),
-          updated_at: new Date()
-        }
+          updated_at: new Date(),
+        },
       ],
       {}
     );
   },
 
-  down: () => {}
+  down: () => {},
 };
