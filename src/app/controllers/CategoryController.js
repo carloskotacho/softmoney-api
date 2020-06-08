@@ -1,4 +1,4 @@
-import { BAD_REQUEST } from 'http-status-codes';
+import { BAD_REQUEST, NOT_FOUND } from 'http-status-codes';
 
 import Category from '../models/Category';
 
@@ -13,6 +13,19 @@ class CategoryController {
     });
 
     return res.json(categories);
+  }
+
+  async findById(req, res) {
+    const category = await Category.findByPk(req.params.id);
+
+    if (!category) {
+      return res.status(NOT_FOUND).json({ error: 'Category not found' });
+    }
+
+    return res.json({
+      id: category.id,
+      name: category.name,
+    });
   }
 
   async store(req, res) {
