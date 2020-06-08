@@ -9,6 +9,7 @@ module.exports = {
           name: 'Empresa SoftMoney',
           email: 'admin@softmoney.com',
           password_hash: bcrypt.hashSync('qwerty', 8),
+          provider: true,
           created_at: new Date(),
           updated_at: new Date(),
         },
