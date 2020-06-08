@@ -21,6 +21,7 @@ routes.use(authMiddleware);
 routes.put('/users', validateUserUpdate, UserController.update);
 
 routes.get('/categories', CategoryController.index);
+routes.get('/categories/:id', CategoryController.findById);
 routes.post('/categories', validateCategoryStore, CategoryController.store);
 
 export default routes;
