@@ -21,7 +21,7 @@ module.exports = {
       },
       complement: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       neighborhood: {
         type: Sequelize.STRING,
