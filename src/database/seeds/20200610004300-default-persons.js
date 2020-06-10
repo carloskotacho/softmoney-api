@@ -1,0 +1,70 @@
+module.exports = {
+  up: (QueryInterface) => {
+    return QueryInterface.bulkInsert(
+      'persons',
+      [
+        {
+          name: 'Márcio Tomás da Luz',
+          street: 'Avenida dos Diamantes',
+          number: '682',
+          complement: 'Apto 23',
+          neighborhood: 'Parque das Gemas',
+          post_code: '76875-896',
+          city_id: 1,
+          active: false,
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          name: 'Renato Henrique Edson Oliveira',
+          street: 'Rua Ulisses Serejo',
+          number: '714',
+          complement: 'Casa',
+          neighborhood: 'Cidade Operária',
+          post_code: '65058-097',
+          city_id: 2,
+          active: true,
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          name: 'Pietro André Guilherme Cardoso',
+          street: 'Rua Cento e Noventa e Sete',
+          number: '741',
+          neighborhood: 'Morada do Sol II (Itambi)',
+          post_code: '24865-475',
+          city_id: 6,
+          active: false,
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          name: 'Larissa Brenda Bianca Fernandes',
+          street: 'Rua da Vitória',
+          number: '990',
+          complement: 'Apto 45',
+          neighborhood: 'Centro',
+          post_code: '53525-750',
+          city_id: '9',
+          active: true,
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+        {
+          name: 'Antônia Daiane de Paula',
+          street: 'Rua Pedra Verde',
+          number: '796',
+          neighborhood: 'Piratininga (Venda Nova)',
+          post_code: '31570-600',
+          city_id: 1,
+          active: true,
+          created_at: new Date(),
+          updated_at: new Date(),
+        },
+      ],
+      {}
+    );
+  },
+
+  down: () => {},
+};
