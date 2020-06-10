@@ -3,6 +3,7 @@ import { Router } from 'express';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import CategoryController from './app/controllers/CategoryController';
+import StateController from './app/controllers/StateController';
 
 import validateUserStore from './app/validators/UserStore';
 import validateUserUpdate from './app/validators/UserUpdate';
@@ -23,5 +24,7 @@ routes.put('/users', validateUserUpdate, UserController.update);
 routes.get('/categories', CategoryController.index);
 routes.get('/categories/:id', CategoryController.findById);
 routes.post('/categories', validateCategoryStore, CategoryController.store);
+
+routes.get('/states', StateController.index);
 
 export default routes;
