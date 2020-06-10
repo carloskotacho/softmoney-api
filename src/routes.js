@@ -4,6 +4,7 @@ import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import CategoryController from './app/controllers/CategoryController';
 import StateController from './app/controllers/StateController';
+import CityController from './app/controllers/CityController';
 
 import validateUserStore from './app/validators/UserStore';
 import validateUserUpdate from './app/validators/UserUpdate';
@@ -26,5 +27,6 @@ routes.get('/categories/:id', CategoryController.findById);
 routes.post('/categories', validateCategoryStore, CategoryController.store);
 
 routes.get('/states', StateController.index);
+routes.get('/cities/:stateId', CityController.findByState);
 
 export default routes;
