@@ -4,9 +4,10 @@ import User from '../app/models/User';
 import Category from '../app/models/Category';
 import State from '../app/models/State';
 import City from '../app/models/City';
+import Person from '../app/models/Person';
 import databaseConfig from '../config/database';
 
-const models = [User, Category, State, City];
+const models = [User, Category, State, City, Person];
 
 class Database {
   constructor() {
