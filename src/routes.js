@@ -5,11 +5,13 @@ import SessionController from './app/controllers/SessionController';
 import CategoryController from './app/controllers/CategoryController';
 import StateController from './app/controllers/StateController';
 import CityController from './app/controllers/CityController';
+import CustomerController from './app/controllers/CustomerController';
 
 import validateUserStore from './app/validators/UserStore';
 import validateUserUpdate from './app/validators/UserUpdate';
 import validateSessionStore from './app/validators/SessionStore';
 import validateCategoryStore from './app/validators/CategoryStore';
+import validateCustomerStore from './app/validators/CustomerStore';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -28,5 +30,7 @@ routes.post('/categories', validateCategoryStore, CategoryController.store);
 
 routes.get('/states', StateController.index);
 routes.get('/cities/:stateId', CityController.findByState);
+
+routes.post('/customers', validateCustomerStore, CustomerController.store);
 
 export default routes;
