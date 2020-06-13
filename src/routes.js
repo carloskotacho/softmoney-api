@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import multer from 'multer';
+import multerConfig from './config/multer';
 
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
@@ -16,6 +18,7 @@ import validateCustomerStore from './app/validators/CustomerStore';
 import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
+const upload = multer(multerConfig);
 
 routes.post('/users', validateUserStore, UserController.store);
 routes.post('/sessions', validateSessionStore, SessionController.store);
@@ -32,5 +35,9 @@ routes.get('/states', StateController.index);
 routes.get('/cities/:stateId', CityController.findByState);
 
 routes.post('/customers', validateCustomerStore, CustomerController.store);
+
+routes.post('/files', upload.single('file'), (req, res) => {
+  return res.json({ ok: true });
+});
 
 export default routes;
