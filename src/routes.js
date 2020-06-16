@@ -15,6 +15,7 @@ import validateUserUpdate from './app/validators/UserUpdate';
 import validateSessionStore from './app/validators/SessionStore';
 import validateCategoryStore from './app/validators/CategoryStore';
 import validateCustomerStore from './app/validators/CustomerStore';
+import validateCustomerUpdate from './app/validators/CustomerUpdate';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -36,6 +37,7 @@ routes.get('/states', StateController.index);
 routes.get('/cities/:stateId', CityController.findByState);
 
 routes.post('/customers', validateCustomerStore, CustomerController.store);
+routes.put('/customers/:id', validateCustomerUpdate, CustomerController.update);
 
 routes.post('/files', upload.single('file'), FileController.store);
 
