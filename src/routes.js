@@ -8,6 +8,7 @@ import CategoryController from './app/controllers/CategoryController';
 import StateController from './app/controllers/StateController';
 import CityController from './app/controllers/CityController';
 import CustomerController from './app/controllers/CustomerController';
+import FileController from './app/controllers/FileController';
 
 import validateUserStore from './app/validators/UserStore';
 import validateUserUpdate from './app/validators/UserUpdate';
@@ -36,8 +37,6 @@ routes.get('/cities/:stateId', CityController.findByState);
 
 routes.post('/customers', validateCustomerStore, CustomerController.store);
 
-routes.post('/files', upload.single('file'), (req, res) => {
-  return res.json({ ok: true });
-});
+routes.post('/files', upload.single('file'), FileController.store);
 
 export default routes;
