@@ -1,4 +1,4 @@
-import { NOT_FOUND } from 'http-status-codes';
+import { NOT_FOUND, NO_CONTENT } from 'http-status-codes';
 
 import Customer from '../models/Customer';
 
@@ -57,6 +57,18 @@ class CustomerController {
       active,
       avatar_id,
     });
+  }
+
+  async delete(req, res) {
+    const customer = await Customer.findByPk(req.params.id);
+
+    if (!customer) {
+      return res.status(NOT_FOUND).json({ error: 'Customer not found' });
+    }
+
+    await customer.destroy();
+
+    return res.status(NO_CONTENT).json();
   }
 }
 
