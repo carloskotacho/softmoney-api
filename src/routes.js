@@ -47,5 +47,6 @@ routes.post('/files', upload.single('file'), FileController.store);
 routes.get('/providers', ProviderController.index);
 
 routes.get('/launches', LaunchController.index);
+routes.get('/launches/:id', LaunchController.findById);
 
 export default routes;
