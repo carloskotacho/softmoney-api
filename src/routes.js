@@ -10,6 +10,7 @@ import CityController from './app/controllers/CityController';
 import CustomerController from './app/controllers/CustomerController';
 import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
+import LaunchController from './app/controllers/LaunchController';
 
 import validateUserStore from './app/validators/UserStore';
 import validateUserUpdate from './app/validators/UserUpdate';
@@ -44,5 +45,7 @@ routes.delete('/customers/:id', CustomerController.delete);
 routes.post('/files', upload.single('file'), FileController.store);
 
 routes.get('/providers', ProviderController.index);
+
+routes.get('/launches', LaunchController.index);
 
 export default routes;
