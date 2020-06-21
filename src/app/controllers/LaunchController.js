@@ -7,7 +7,21 @@ import Customer from '../models/Customer';
 class LaunchController {
   async index(req, res) {
     const launches = await Launch.findAll({
-      attributes: { exclude: ['createdAt', 'updatedAt'] },
+      attributes: {
+        exclude: ['createdAt', 'updatedAt', 'category_id', 'customer_id'],
+      },
+      include: [
+        {
+          model: Category,
+          as: 'category',
+          attributes: ['id', 'name'],
+        },
+        {
+          model: Customer,
+          as: 'customer',
+          attributes: ['id', 'name'],
+        },
+      ],
     });
 
     return res.json(launches);
@@ -15,7 +29,21 @@ class LaunchController {
 
   async findById(req, res) {
     const launch = await Launch.findByPk(req.params.id, {
-      attributes: { exclude: ['createdAt', 'updatedAt'] },
+      attributes: {
+        exclude: ['createdAt', 'updatedAt', 'category_id', 'customer_id'],
+      },
+      include: [
+        {
+          model: Category,
+          as: 'category',
+          attributes: ['id', 'name'],
+        },
+        {
+          model: Customer,
+          as: 'customer',
+          attributes: ['id', 'name'],
+        },
+      ],
     });
 
     if (!launch) {

@@ -20,8 +20,14 @@ class Launch extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Category, { foreignKey: 'category_id' });
-    this.belongsTo(models.Customer, { foreignKey: 'customer_id' });
+    this.belongsTo(models.Category, {
+      foreignKey: 'category_id',
+      as: 'category',
+    });
+    this.belongsTo(models.Customer, {
+      foreignKey: 'customer_id',
+      as: 'customer',
+    });
   }
 }
 
