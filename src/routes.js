@@ -40,6 +40,7 @@ routes.get('/cities/:stateId', CityController.findByState);
 
 routes.post('/customers', validateCustomerStore, CustomerController.store);
 routes.put('/customers/:id', validateCustomerUpdate, CustomerController.update);
+routes.put('/customers/:id/active', CustomerController.updateActive);
 routes.delete('/customers/:id', CustomerController.delete);
 
 routes.post('/files', upload.single('file'), FileController.store);
