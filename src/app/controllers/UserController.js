@@ -1,4 +1,4 @@
-import { BAD_REQUEST, UNAUTHORIZED } from 'http-status-codes';
+import { BAD_REQUEST, UNAUTHORIZED, CREATED } from 'http-status-codes';
 
 import User from '../models/User';
 
@@ -12,7 +12,7 @@ class UserController {
 
     const { id, name, email, provider } = await User.create(req.body);
 
-    return res.json({
+    return res.status(CREATED).json({
       id,
       name,
       email,

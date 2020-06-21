@@ -1,4 +1,4 @@
-import { BAD_REQUEST, NOT_FOUND } from 'http-status-codes';
+import { BAD_REQUEST, NOT_FOUND, CREATED } from 'http-status-codes';
 
 import Category from '../models/Category';
 
@@ -41,7 +41,7 @@ class CategoryController {
 
     const { id, name } = await Category.create(req.body);
 
-    return res.json({
+    return res.status(CREATED).json({
       id,
       name,
     });

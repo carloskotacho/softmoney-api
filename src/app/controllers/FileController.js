@@ -1,3 +1,5 @@
+import { CREATED } from 'http-status-codes';
+
 import File from '../models/File';
 
 class FileController {
@@ -9,7 +11,7 @@ class FileController {
       path,
     });
 
-    return res.json(file);
+    return res.status(CREATED).json(file);
   }
 }
 

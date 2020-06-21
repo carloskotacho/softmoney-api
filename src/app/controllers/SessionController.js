@@ -1,4 +1,4 @@
-import { UNAUTHORIZED } from 'http-status-codes';
+import { UNAUTHORIZED, CREATED } from 'http-status-codes';
 import jwt from 'jsonwebtoken';
 
 import User from '../models/User';
@@ -22,7 +22,7 @@ class SessionController {
 
     const { id, name } = user;
 
-    return res.json({
+    return res.status(CREATED).json({
       user: {
         id,
         name,

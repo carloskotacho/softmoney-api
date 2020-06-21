@@ -1,4 +1,4 @@
-import { NOT_FOUND, NO_CONTENT, BAD_REQUEST } from 'http-status-codes';
+import { NOT_FOUND, NO_CONTENT, BAD_REQUEST, CREATED } from 'http-status-codes';
 
 import * as Yup from 'yup';
 import Customer from '../models/Customer';
@@ -16,7 +16,7 @@ class CustomerController {
       active,
     } = await Customer.create(req.body);
 
-    return res.json({
+    return res.status(CREATED).json({
       id,
       name,
       street,
