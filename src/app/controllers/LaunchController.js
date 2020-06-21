@@ -72,6 +72,18 @@ class LaunchController {
 
     return res.status(CREATED).json({ id, description });
   }
+
+  async update(req, res) {
+    const launch = await Launch.findByPk(req.params.id);
+
+    if (!launch) {
+      return res.status(NOT_FOUND).json({ error: 'Launch not found' });
+    }
+
+    const { id, description } = await launch.update(req.body);
+
+    return res.json({ id, description });
+  }
 }
 
 export default new LaunchController();
