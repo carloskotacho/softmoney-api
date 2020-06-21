@@ -18,6 +18,7 @@ import validateSessionStore from './app/validators/SessionStore';
 import validateCategoryStore from './app/validators/CategoryStore';
 import validateCustomerStore from './app/validators/CustomerStore';
 import validateCustomerUpdate from './app/validators/CustomerUpdate';
+import validateLaunchStore from './app/validators/LaunchStore';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -49,5 +50,6 @@ routes.get('/providers', ProviderController.index);
 
 routes.get('/launches', LaunchController.index);
 routes.get('/launches/:id', LaunchController.findById);
+routes.post('/launches', validateLaunchStore, LaunchController.store);
 
 export default routes;
