@@ -80,6 +80,8 @@ class LaunchController {
       return res.status(NOT_FOUND).json({ error: 'Launch not found' });
     }
 
+    // TODO: verify customer inactive
+
     const { id, description } = await launch.update(req.body);
 
     return res.json({ id, description });
