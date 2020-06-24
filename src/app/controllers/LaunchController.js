@@ -1,4 +1,4 @@
-import { NOT_FOUND, CREATED } from 'http-status-codes';
+import { NOT_FOUND, CREATED, BAD_REQUEST } from 'http-status-codes';
 
 import Launch from '../models/Launch';
 import Category from '../models/Category';
@@ -80,7 +80,11 @@ class LaunchController {
       return res.status(NOT_FOUND).json({ error: 'Launch not found' });
     }
 
-    // TODO: verify customer inactive
+    const { active } = await Customer.findByPk(launch.customer_id);
+
+    if (!active) {
+      return res.status(BAD_REQUEST).json({ error: 'Customer inactive' });
+    }
 
     const { id, description } = await launch.update(req.body);
 
