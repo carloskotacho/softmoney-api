@@ -1,4 +1,4 @@
-import { NOT_FOUND, CREATED, BAD_REQUEST } from 'http-status-codes';
+import { NOT_FOUND, CREATED, BAD_REQUEST, NO_CONTENT } from 'http-status-codes';
 
 import Launch from '../models/Launch';
 import Category from '../models/Category';
@@ -89,6 +89,18 @@ class LaunchController {
     const { id, description } = await launch.update(req.body);
 
     return res.json({ id, description });
+  }
+
+  async delete(req, res) {
+    const launch = await Launch.findByPk(req.params.id);
+
+    if (!launch) {
+      return res.status(NOT_FOUND).json({ error: 'Launch not found' });
+    }
+
+    await launch.destroy();
+
+    return res.status(NO_CONTENT).json();
   }
 }
 
