@@ -18,6 +18,15 @@
 
 ### Contributing
 
+[![0](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/0)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/0)
+[![1](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/1)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/1)
+[![2](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/2)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/2)
+[![3](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/3)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/3)
+[![4](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/4)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/4)
+[![5](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/5)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/5)
+[![6](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/6)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/6)
+[![7](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/7)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/7)
+
 ### License
 
 Fastfeet is under the MIT license. See the [LICENSE](https://github.com/carloskotacho/softmoney-api/blob/master/LICENSE) for more information.
