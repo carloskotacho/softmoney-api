@@ -6,7 +6,11 @@ import Customer from '../models/Customer';
 
 class LaunchController {
   async index(req, res) {
+    const { page = 1 } = req.query;
+
     const launches = await Launch.findAll({
+      limit: 20,
+      offset: (page - 1) * 20,
       attributes: {
         exclude: ['createdAt', 'updatedAt', 'category_id', 'customer_id'],
       },
