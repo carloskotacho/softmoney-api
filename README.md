@@ -29,4 +29,4 @@
 
 ### License
 
-Fastfeet is under the MIT license. See the [LICENSE](https://github.com/carloskotacho/softmoney-api/blob/master/LICENSE) for more information.
+Softmoney is under the MIT license. See the [LICENSE](https://github.com/carloskotacho/softmoney-api/blob/master/LICENSE) for more information.
