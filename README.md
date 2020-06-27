@@ -1,22 +1,51 @@
 <a href="https://github.com/carloskotacho/softmoney-backend/blob/master/LICENSE">
-    <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=informational" height="18"/>
+    <img src="https://img.shields.io/github/license/carloskotacho/softmoney-backend?color=665EFE&label=licen%C3%A7a&style=flat-square" />
 </a>
 
-### Objective
+<a href="https://david-dm.org/carloskotacho/softmoney-api">
+    <img src="https://img.shields.io/static/v1?label=dependências&message=prod&color=665EFE&style=flat-square"/>
+</a>
+
+<a href="https://david-dm.org/carloskotacho/softmoney-api?type=dev">
+    <img src="https://img.shields.io/static/v1?label=dependências&message=dev&color=665EFE&style=flat-square"/>
+</a>
+
+### Índice
+
+* [Objetivo](#objetivo)
+* [Deploy](#deploy)
+* [Como executar](#como-executar)
+* [Como usar](#como-usar)
+* [Bibliotecas](#bibliotecas)
+* [Contribuindo](#contribuindo)
+* [Licença](#licença)
+
+### Objetivo
+
+Construir uma API Rest para Controle financeiro - Receitas e Despesas
 
 ### Deploy
 
-### Releases
+### Como executar
 
-### Showcase
+```
+# Clone o repositório:
+$ git clone git@github.com:carloskotacho/softmoney-api.git
 
-### Running
+# Dentro da pasta do projeto, instale as dependências:
+$ yarn
 
-### Usage
+# Execute o projeto
+$ yarn dev
+```
 
-### Libs
+### Como usar
 
-### Contributing
+Acesse a documentação da API [aqui]()
+
+### Bibliotecas
+
+### Contribuindo
 
 [![0](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/0)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/0)
 [![1](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/1)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/1)
@@ -27,6 +56,8 @@
 [![6](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/6)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/6)
 [![7](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/7)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/7)
 
-### License
+### Licença
 
-Softmoney is under the MIT license. See the [LICENSE](https://github.com/carloskotacho/softmoney-api/blob/master/LICENSE) for more information.
+Softmoney está sob licença MIT. Veja [LICENSE](https://github.com/carloskotacho/softmoney-api/blob/master/LICENSE) para mais informações.
+
+© Carlos Henrique 🚀
