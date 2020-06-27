@@ -3,11 +3,11 @@
 </a>
 
 <a href="https://david-dm.org/carloskotacho/softmoney-api">
-    <img src="https://img.shields.io/static/v1?label=dependências&message=prod&color=665EFE&style=flat-square"/>
+    <img src="https://img.shields.io/static/v1?label=depend&#234ncias&message=prod&color=665EFE&style=flat-square"/>
 </a>
 
 <a href="https://david-dm.org/carloskotacho/softmoney-api?type=dev">
-    <img src="https://img.shields.io/static/v1?label=dependências&message=dev&color=665EFE&style=flat-square"/>
+    <img src="https://img.shields.io/static/v1?label=depend&#234ncias&message=dev&color=665EFE&style=flat-square"/>
 </a>
 
 ### Índice
