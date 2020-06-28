@@ -1,3 +1,5 @@
+## Softmoney - API
+
 <a href="https://github.com/carloskotacho/softmoney-backend/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/carloskotacho/softmoney-backend?color=665EFE&label=licen%C3%A7a&style=flat-square" />
 </a>
@@ -16,7 +18,6 @@
 * [Deploy](#deploy)
 * [Como executar](#como-executar)
 * [Como usar](#como-usar)
-* [Bibliotecas](#bibliotecas)
 * [Contribuindo](#contribuindo)
 * [Licença](#licença)
 
