@@ -40,6 +40,7 @@ routes.post('/categories', validateCategoryStore, CategoryController.store);
 routes.get('/states', StateController.index);
 routes.get('/cities/:stateId', CityController.findByState);
 
+routes.get('/customers', CustomerController.index);
 routes.post('/customers', validateCustomerStore, CustomerController.store);
 routes.put('/customers/:id', validateCustomerUpdate, CustomerController.update);
 routes.put('/customers/:id/active', CustomerController.updateActive);

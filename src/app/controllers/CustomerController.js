@@ -1,31 +1,29 @@
 import { NOT_FOUND, NO_CONTENT, BAD_REQUEST, CREATED } from 'http-status-codes';
+import { Op } from 'sequelize';
 
 import * as Yup from 'yup';
 import Customer from '../models/Customer';
 
 class CustomerController {
-  async store(req, res) {
-    const {
-      id,
-      name,
-      street,
-      number,
-      neighborhood,
-      post_code,
-      city_id,
-      active,
-    } = await Customer.create(req.body);
+  async index(req, res) {
+    const { page = 1, name } = req.query;
 
-    return res.status(CREATED).json({
-      id,
-      name,
-      street,
-      number,
-      neighborhood,
-      post_code,
-      city_id,
-      active,
+    const customers = await Customer.findAll({
+      where: {
+        name: {
+          [Op.substring]: name,
+        },
+      },
+      limit: 20,
+      offset: (page - 1) * 20,
     });
+
+    return res.json(customers);
+  }
+
+  async store(req, res) {
+    await Customer.create(req.body);
+    return res.status(CREATED).json();
   }
 
   async update(req, res) {
@@ -35,29 +33,9 @@ class CustomerController {
       return res.status(NOT_FOUND).json({ error: 'Customer not found' });
     }
 
-    const {
-      id,
-      name,
-      street,
-      number,
-      neighborhood,
-      post_code,
-      city_id,
-      active,
-      avatar_id,
-    } = await customer.update(req.body);
+    await customer.update(req.body);
 
-    return res.json({
-      id,
-      name,
-      street,
-      number,
-      neighborhood,
-      post_code,
-      city_id,
-      active,
-      avatar_id,
-    });
+    return res.status(NO_CONTENT).json();
   }
 
   async updateActive(req, res) {
