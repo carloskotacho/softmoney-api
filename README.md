@@ -43,8 +43,6 @@ $ yarn dev
 
 Acesse a documentação da API [aqui]()
 
-### Bibliotecas
-
 ### Contribuindo
 
 [![0](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/0)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/0)
