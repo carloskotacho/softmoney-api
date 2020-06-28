@@ -1,5 +1,7 @@
 ## Softmoney - API
 
+Go to [README ENG](https://github.com/carloskotacho/softmoney-api/blob/master/README-ENG.md)
+
 <a href="https://github.com/carloskotacho/softmoney-backend/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/carloskotacho/softmoney-backend?color=665EFE&label=licen%C3%A7a&style=flat-square" />
 </a>
