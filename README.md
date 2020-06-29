@@ -14,22 +14,25 @@ Go to [README ENG](https://github.com/carloskotacho/softmoney-api/blob/master/RE
     <img src="https://img.shields.io/static/v1?label=depend%C3%AAncias&message=dev&color=665EFE&style=flat-square"/>
 </a>
 
-### Índice
+<details>
+<summary>📖 Tabela de conteúdos</summary>
+<br />
 
-* [Objetivo](#objetivo)
-* [Deploy](#deploy)
-* [Como executar](#como-executar)
-* [Como usar](#como-usar)
-* [Contribuindo](#contribuindo)
-* [Licença](#licença)
+* [Objetivo](#-objetivo)
+* [Deploy](#-deploy)
+* [Como executar](#-como-executar)
+* [Como usar](#-como-usar)
+* [Contribuindo](#-contribuindo)
+* [Licença](#-licença)
+</details>
 
-### Objetivo
+### ➤ Objetivo
 
 Construir uma API Rest para Controle financeiro - Receitas e Despesas
 
-### Deploy
+### ➤ Deploy
 
-### Como executar
+### ➤ Como executar
 
 ```
 # Clone o repositório:
@@ -42,11 +45,11 @@ $ yarn
 $ yarn dev
 ```
 
-### Como usar
+### ➤ Como usar
 
 Acesse a documentação da API [aqui]()
 
-### Contribuindo
+### ➤ Contribuindo
 
 [![0](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/0)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/0)
 [![1](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/1)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/1)
@@ -57,7 +60,7 @@ Acesse a documentação da API [aqui]()
 [![6](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/6)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/6)
 [![7](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/images/7)](https://sourcerer.io/fame/carloskotacho/carloskotacho/softmoney-api/links/7)
 
-### Licença
+### ➤ Licença
 
 Softmoney está sob licença MIT. Veja [LICENSE](https://github.com/carloskotacho/softmoney-api/blob/master/LICENSE) para mais informações.
 
