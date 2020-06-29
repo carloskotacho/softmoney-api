@@ -15,7 +15,7 @@ Go to [README ENG](https://github.com/carloskotacho/softmoney-api/blob/master/RE
 </a>
 
 <details>
-<summary>📖 Tabela de conteúdos</summary>
+<summary>📖 Índice</summary>
 <br />
 
 * [Objetivo](#-objetivo)
