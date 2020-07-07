@@ -14,18 +14,6 @@ Go to [README ENG](https://github.com/carloskotacho/softmoney-api/blob/master/RE
     <img src="https://img.shields.io/static/v1?label=depend%C3%AAncias&message=dev&color=665EFE&style=flat-square"/>
 </a>
 
-<details>
-<summary>📖 Índice</summary>
-<br />
-
-* [Objetivo](#-objetivo)
-* [Deploy](#-deploy)
-* [Como executar](#-como-executar)
-* [Como usar](#-como-usar)
-* [Contribuindo](#-contribuindo)
-* [Licença](#-licença)
-</details>
-
 ### ➤ Objetivo
 
 Construir uma API Rest para Controle financeiro - Receitas e Despesas
