@@ -3,6 +3,8 @@ import { Op } from 'sequelize';
 
 import * as Yup from 'yup';
 import Customer from '../models/Customer';
+import File from '../models/File';
+import City from '../models/City';
 
 class CustomerController {
   async index(req, res) {
@@ -16,6 +18,21 @@ class CustomerController {
       },
       limit: 20,
       offset: (page - 1) * 20,
+      include: [
+        {
+          model: File,
+          as: 'avatar',
+          attributes: ['id', 'path', 'url'],
+        },
+        {
+          model: City,
+          as: 'city',
+          attributes: ['id', 'name'],
+        },
+      ],
+      attributes: {
+        exclude: ['avatar_id', 'city_id', 'createdAt', 'updatedAt'],
+      },
     });
 
     return res.json(customers);
