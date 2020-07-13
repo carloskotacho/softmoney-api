@@ -18,6 +18,8 @@ Go to [README ENG](https://github.com/carloskotacho/softmoney-api/blob/master/RE
 
 Construir uma API Rest para Controle financeiro - Receitas e Despesas
 
+### ➤ Prévia
+
 ### ➤ Deploy
 
 ### ➤ Como executar
