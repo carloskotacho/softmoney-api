@@ -106,6 +106,9 @@ class LaunchController {
 
     return res.status(NO_CONTENT).json();
   }
+
+  // TODO: /launches/statistic/per-category
+  // TODO: /launches/statistic/per-day
 }
 
 export default new LaunchController();
