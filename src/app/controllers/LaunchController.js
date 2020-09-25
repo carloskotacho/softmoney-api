@@ -130,11 +130,13 @@ class LaunchController {
           attributes: ['id', 'name'],
         },
       ],
-      group: ['category.id', 'category_id'],
+      group: ['category.id'],
     });
 
     return res.json(launch);
   }
+
+  // TODO: /launches/statistic/per-day
 }
 
 export default new LaunchController();
