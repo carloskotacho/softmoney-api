@@ -20,7 +20,7 @@ module.exports = {
         allowNull: true,
       },
       value: {
-        type: Sequelize.STRING,
+        type: Sequelize.FLOAT,
         allowNull: false,
       },
       observation: {

@@ -7,7 +7,7 @@ class Launch extends Model {
         description: Sequelize.STRING,
         due_date: Sequelize.DATE,
         pay_date: Sequelize.DATE,
-        value: Sequelize.STRING,
+        value: Sequelize.FLOAT,
         observation: Sequelize.STRING,
         type: Sequelize.STRING,
       },

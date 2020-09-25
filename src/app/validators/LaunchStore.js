@@ -8,7 +8,7 @@ export default async (req, res, next) => {
       description: Yup.string().required(),
       due_date: Yup.date().required(),
       pay_date: Yup.date().notRequired(),
-      value: Yup.string().required(),
+      value: Yup.number().required(),
       observation: Yup.string().notRequired(),
       type: Yup.string().required(),
       category_id: Yup.number().required(),

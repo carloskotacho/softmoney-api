@@ -55,5 +55,6 @@ routes.get('/launches/:id', LaunchController.findById);
 routes.post('/launches', validateLaunchStore, LaunchController.store);
 routes.put('/launches/:id', validateLaunchUpdate, LaunchController.update);
 routes.delete('/launches/:id', LaunchController.delete);
+routes.get('/launches/statistic/per-category', LaunchController.perCategory);
 
 export default routes;

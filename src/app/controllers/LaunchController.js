@@ -1,4 +1,7 @@
 import { NOT_FOUND, CREATED, BAD_REQUEST, NO_CONTENT } from 'http-status-codes';
+import { startOfMonth, endOfMonth } from 'date-fns';
+
+import { Op, fn, col } from 'sequelize';
 
 import Launch from '../models/Launch';
 import Category from '../models/Category';
@@ -107,8 +110,31 @@ class LaunchController {
     return res.status(NO_CONTENT).json();
   }
 
-  // TODO: /launches/statistic/per-category
-  // TODO: /launches/statistic/per-day
+  async perCategory(req, res) {
+
+    const date = new Date();
+
+    const launch = await Launch.findAll({
+      where: {
+        due_date: {
+          [Op.between]: [ startOfMonth(date), endOfMonth(date) ],
+        },
+      },
+      attributes: [
+        [fn('sum', col('value')), 'total_value'],
+      ],
+      include: [
+        {
+          model: Category,
+          as: 'category',
+          attributes: ['id', 'name'],
+        },
+      ],
+      group: ['category.id', 'category_id'],
+    });
+
+    return res.json(launch);
+  }
 }
 
 export default new LaunchController();
