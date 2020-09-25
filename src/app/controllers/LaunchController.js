@@ -136,7 +136,26 @@ class LaunchController {
     return res.json(launch);
   }
 
-  // TODO: /launches/statistic/per-day
+  async perDay(req, res) {
+
+    const date = new Date();
+
+    const launch = await Launch.findAll({
+      where: {
+        due_date: {
+          [Op.between]: [ startOfMonth(date), endOfMonth(date) ],
+        },
+      },
+      attributes: [
+        'type',
+        'due_date',
+        [fn('sum', col('value')), 'total_value'],
+      ],
+      group: ['type', 'due_date'],
+    });
+
+    return res.json(launch);
+  }
 }
 
 export default new LaunchController();
